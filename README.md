@@ -35,6 +35,7 @@ lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 - nfs
 - smb/cifs
 - fuse
+
 **配置正确的网关与dns服务器，将容器进行联网**
 ## 基础设置
 开启容器，登录后，开启第三方ssh连接，方便后续操作
