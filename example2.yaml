@@ -1,0 +1,39 @@
+interface-name: eth0
+ipv6: false
+tun:
+    enable: true
+    stack: system
+    auto-detect-interface: true
+port: 7891
+socks-port: 7890
+redir-port: 7893
+allow-lan: true
+profile:
+  # open tracing exporter API
+  tracing: true
+mode: Rule
+external-ui: /home/ui
+secret: '123456789'
+external-controller: 0.0.0.0:9013
+log-level: silent
+proxy-providers:
+  节点列表:
+    type: file
+    path: /etc/clash/1.yaml
+    filter: ''
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300    
+ 
+proxy-groups:  
+  - name: PROXY
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 节点列表
+    proxies:
+      - DIRECT    
+rules:
+  - MATCH,PROXY
