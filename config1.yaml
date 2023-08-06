@@ -19,7 +19,7 @@ log-level: silent
 proxy-providers:
   节点列表:
    type: http
-   path: ./profiles/proxies/foo.yaml
+   path: /etc/clash/proxies/foo.yaml
    url: 
    interval: 3600 
    filter: ''
