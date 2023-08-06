@@ -12,7 +12,7 @@ profile:
   # open tracing exporter API
   tracing: true
 mode: Rule
-external-ui: /home/ui
+external-ui: /etc/clash/ui
 secret: '123456789'
 external-controller: 0.0.0.0:9090
 log-level: silent
