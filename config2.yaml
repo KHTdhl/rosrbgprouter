@@ -19,7 +19,7 @@ log-level: silent
 proxy-providers:
   节点列表:
     type: file
-    path: /etc/clash/1.yaml
+    path: /etc/clash/proxies/1.yaml
     filter: ''
     health-check:
       enable: true
