@@ -8,7 +8,7 @@ apt install bird2 vim -y
 echo "软件安装完成"
 
 echo "开始下载 clash premium"
-wget https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-amd64-2023.07.22.gz
+wget https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-amd64-2023.08.17.gz
 echo "clash premium 下载完成"
 
 echo "开始解压"
