@@ -12,11 +12,11 @@ wget https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-am
 echo "clash premium 下载完成"
 
 echo "开始解压"
-gunzip clash-linux-amd64-2023.07.22.gz
+gunzip clash-linux-amd64-2023.08.17.gz
 echo "解压完成"
 
 echo "开始重命名"
-mv clash-linux-amd64-2023.07.22 clash
+mv clash-linux-amd64-2023.08.17 clash
 echo "重命名完成"
 
 echo "开始添加执行权限"
