@@ -10,7 +10,7 @@ echo "软件安装完成"
 # 下载 mosdns
 wget https://github.com/IrineSistiana/mosdns/releases/download/v4.5.3/mosdns-linux-amd64.zip
 echo "下载 mosdns 完成"
-wget https://github.com/haotianlPM/easymosdns-k/releases/download/v2.0.0/easymosdns-k.zip
+wget https://github.com/haotianlPM/easymosdns-k/releases/download/v1.0.0/easymosdns-k.zip
 echo "下载 easymosdns 完成"
 
 # 解压 mosdns
