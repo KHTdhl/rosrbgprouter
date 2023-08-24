@@ -289,8 +289,8 @@ add name=clash local.role=ebgp remote.address=192.168.10.100 .as=65531 routing-t
 # 添加一个地址列表，名称为proxy，包含地址192.168.10.32
 
 
-/ip firewall mangle add action=mark-routing chain=prerouting src-address-list=proxy dst-port=80,443 dst-address-type=!local new-routing-mark=bypass
-# 添加一个防火墙Mangle规则，动作为标记路由，链为prerouting，源地址列表为proxy，目标端口为80和443，目标地址类型不是本地地址，新的路由标记为bypass
+/ip firewall mangle add action=mark-routing chain=prerouting src-address-list=proxy dst-port=80,443 dst-address-type=!local protocol=tcp new-routing-mark=bypass
+# 添加一个防火墙Mangle规则，动作为标记路由，链为prerouting，源地址列表为proxy，连接类型tcp。目标端口为80和443，目标地址类型不是本地地址，新的路由标记为bypass
 
 重启路由
 ```
