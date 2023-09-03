@@ -1,4 +1,6 @@
 #!/bin/bash
+apt update
+apt install bird2 -y
 
 echo "开始下载 clash premium"
 wget https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-amd64-2023.08.17.gz
