@@ -1,43 +1,16 @@
 #!/bin/bash
-repo_url="https://github.com/Dreamacro/clash/releases/tag/premium"
-api_url="https://api.github.com/repos/Dreamacro/clash/releases/tags/premium"
-download_folder="/home"
-
-# 软件库升级
-apt update
-echo "软件库升级完成"
-
-# 安装所需软件
-apt install bird2 vim -y
-echo "软件安装完成"
 
 echo "开始下载 clash premium"
-# 发送 HTTP 请求获取仓库信息
-response=$(curl -s "$api_url")
+wget https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-amd64-2023.08.17.gz
+echo "clash premium 下载完成"
 
-# 提取文件下载地址和文件名
-download_urls=$(echo "$response" | grep -o '"browser_download_url": "[^"]*' | cut -d '"' -f 4)
-file_names=$(echo "$response" | grep -o '"name": "[^"]*' | cut -d '"' -f 4)
+echo "开始解压"
+gunzip clash-linux-amd64-2023.07.22.gz
+echo "解压完成"
 
-# 遍历下载地址和文件名，下载并保存符合条件的文件
-index=0
-for url in $download_urls; do
-  file_name=$(echo "$file_names" | sed -n "$((index+1))p")
-
-  if [[ $file_name == *"clash-linux-amd64"* && $file_name != *"clash-linux-amd64-v3"* ]]; then
-    echo "Downloading $file_name..."
-    curl -L -o "$download_folder/$file_name" "$url"
-    echo "Downloaded $file_name."
-
-    # 解压文件并重命名为 "clash"
-    echo "Extracting and renaming..."
-    gunzip -c "$download_folder/$file_name" > "$download_folder/clash"
-    echo "Extraction and renaming completed."
-  fi
-
-  index=$((index+1))
-done
-echo "clash premium 下载并重命名完成"
+echo "开始重命名"
+mv clash-linux-amd64-2023.07.22 clash
+echo "重命名完成"
 
 echo "开始添加执行权限"
 chmod u+x clash
