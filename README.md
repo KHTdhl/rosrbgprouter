@@ -274,6 +274,9 @@ add name=clash local.role=ebgp remote.address=192.168.10.100 .as=65531 routing-t
 ```
 ## 方式二
 ```
+/ip route rule
+add table=bypass fib=yes
+
 /ip route
 add distance=1 gateway=pppoe-out1 routing-table=bypass comment=pass
 # 添加一条路由规则，距离为1，网关为pppoe-out1，路由表为bypass，注释为pass
