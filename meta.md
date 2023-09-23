@@ -97,7 +97,7 @@ sudo mosdns service restart
 ```
 # 透明网关的创建与设置
 ```
-chmod +x insclashmeta.sh
+chmod +x installclashmeta.sh
 
 ./insclashmeta.sh
 至此，透明网关安装完成，我们接下来需要一份透明配置
