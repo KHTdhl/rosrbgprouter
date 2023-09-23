@@ -309,6 +309,10 @@ sudo systemctl status clash
 add name=clash local.role=ebgp remote.address=192.168.10.100 .as=65531 routing-table=main router-id=192.168.10.5 as=65530 multihop=yes
 # 添加一个BGP连接，名称为clash，本地角色为ebgp，远程地址为192.168.10.100，自治系统号为65531，路由表为bypass，路由器ID为192.168.10.5，自治系统号为65530，启用多跳选项
 
+
+/ip firewall mangle add action=accept chain=prerouting src-address=192.168.10.100
+# 添加一个防火墙Mangle规则，动作为接受，链为prerouting，源地址为192.168.10.253
+
 ```
 ## 方式二
 ```
