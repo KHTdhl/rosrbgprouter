@@ -289,3 +289,5 @@ add name=clash local.role=ebgp remote.address=192.168.10.100 .as=65531 routing-t
 
 重启路由
 ```
+如果您感觉我的文章有用，或者支持我更加努力的进行创作，可以小小的支持一下！
+![93a1d67e681af4066df0d2187be737c](https://github.com/haotianlPM/rosrbgprouter/assets/22527177/82c375a5-0296-4f08-97bd-2c6e0bdc7789)
