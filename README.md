@@ -294,3 +294,7 @@ add name=clash local.role=ebgp remote.address=192.168.10.100 .as=65531 routing-t
 <div align="center">
 	<img src="[./raw-docs/img/editor.png](https://github.com/haotianlPM/rosrbgprouter/assets/22527177/82c375a5-0296-4f08-97bd-2c6e0bdc7789)" alt="Editor" width="500">
 </div>
+
+<p align="center">
+  <img src="![93a1d67e681af4066df0d2187be737c](https://github.com/haotianlPM/rosrbgprouter/assets/22527177/82c375a5-0296-4f08-97bd-2c6e0bdc7789)" alt="Image" width="800" height="600">
+</p>
